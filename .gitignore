@@ -1,0 +1,45 @@
+# Hugo generated output (do not commit)
+/public/
+/resources/
+/resources/_gen/
+
+# Optional Hugo caches / build lock
+.hugo_build.lock
+.hugo_cache/
+
+# Frontend tool output / dependencies
+node_modules/
+dist/
+.bundle/
+
+# Env and secrets
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Temporary files
+*.tmp
+*.temp
+
+# CI / local deploy artifacts (optional)
+.netlify/
+publish/
+hugo_stats.json

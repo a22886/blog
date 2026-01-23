@@ -1,0 +1,80 @@
+baseurl = "https://a22886.github.io/blog"
+title = "BLANK"
+theme = "hugo-coder"
+defaultcontentlanguage = "zh-cn"
+
+[pagination]
+pagerSize = 20
+
+[markup.highlight]
+style = "github-dark"
+
+[markup.goldmark.extensions]
+typographer = false
+
+[params]
+  author = "Runze Zhang"
+  info = "There's nothing in the town."
+  gravatar = "zhangrz25@mails.tsinghua.edu.cn"
+  faviconSVG = "img/favicon.svg"
+  favicon_32 = "img/favicon32x32.png"
+  favicon_16 = "img/favicon16x16.png"
+
+  customCSS = ["css/custom.css"]
+
+  since = 2026
+  katex = true
+  enableTwemoji = true
+
+  colorScheme = "auto"
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+# Social links
+[[params.social]]
+  name = "Github"
+  icon = "fa-brands fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/a22886/"
+[[params.social]]
+  name = "Email"
+  icon = "fa-regular fa-envelope fa-2x"
+  weight = 2
+  url = "mailto:zhangrz25@mails.tsinghua.edu.cn"
+[[params.social]]
+  name = "Wechat"
+  icon = "fa-brands fa-weixin fa-2x"
+  weight = 3
+  url = "img/wechat.jpg"
+[[params.social]]
+  name = "QQ"
+  icon = "fa-brands fa-qq fa-2x"
+  weight = 4
+  url = "img/qq.jpg"
+[[params.social]]
+  name = "zhihu"
+  icon = "fa-brands fa-zhihu fa-2x"
+  weight = 5
+  url = "https://www.zhihu.com/people/22886-69"
+
+# Menu links
+[[menu.main]]
+  name = "关于"
+  weight = 1
+  url = "about/"
+[[menu.main]]
+  name = "文章"
+  weight = 2
+  url  = "posts/"
+[[menu.main]]
+  name = "分类"
+  weight = 3
+  url = "categories/"
+[[menu.main]]
+  name = "合集"
+  weight = 4
+  url = "series/"
