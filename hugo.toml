@@ -1,4 +1,4 @@
-baseurl = "https://a22886.github.io/blog"
+baseurl = "https://a22886.github.io/blog/"
 title = "BLANK"
 theme = "hugo-coder"
 defaultcontentlanguage = "zh-cn"
@@ -9,8 +9,14 @@ pagerSize = 20
 [markup.highlight]
 style = "github-dark"
 
+[markup.goldmark.renderer]
+unsafe = true
 [markup.goldmark.extensions]
 typographer = false
+
+[markup.goldmark.extensions.passthrough]
+enable = true
+delimiters = { block = [['\[', '\]'], ['$$', '$$']], inline = [['\(', '\)'], ['$', '$']]}
 
 [params]
   author = "Runze Zhang"

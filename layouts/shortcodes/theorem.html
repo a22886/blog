@@ -1,0 +1,9 @@
+{{- $num := .Get 0 -}}
+<div class="notice info">
+    <div class="notice-title">
+        <i class="fa-solid fa-book" aria-hidden="true"></i> Theorem {{ $num }}
+    </div>
+    <div class="notice-content">
+        {{- .Inner | $.Page.RenderString | chomp -}}
+    </div>
+</div>
