@@ -1,0 +1,27 @@
+{{- $num := .Get 0 -}}
+{{- $T := split .Inner "TOMANDJERRYSTRINGLITERAL\\" -}}
+{{- $bef := -1 -}}
+<div class="notice note">
+    <div class="notice-title">
+        <i class="fa-solid fa-question" aria-hidden="true"></i> Exercise {{ $num }}
+    </div>
+    <div class="notice-content" style='font-family: "Latin Modern Roman"'>
+    {{- range $content := $T -}}
+        {{- $C := split $content "QUESTIONANDANSWERSTRING\\" -}}
+        {{- if eq (len $C) 2 -}}
+        <details>
+            <summary>
+                {{- index $C 0 | $.Page.RenderString | chomp -}}
+            </summary>
+            <blockquote>
+                {{- index $C 1 | $.Page.RenderString | chomp -}}
+            </blockquote>
+        </details>
+        {{- else -}}
+            {{- if eq $bef 1 -}}<br>{{- end -}}
+            {{- index $C 0 | $.Page.RenderString | chomp -}}     
+        {{- end -}}
+        {{- $bef = len $C -}}
+    {{- end -}}
+    </div>
+</div>

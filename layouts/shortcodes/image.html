@@ -1,0 +1,14 @@
+{{- $src := .Inner | chomp -}}
+{{- $img := print "img/" $src -}}
+{{- if hasSuffix $src ".svg" -}}
+  {{- $url := print "static/" $img -}}
+  {{- $svg := readFile $url | chomp -}}
+  {{- $svg = replaceRE `(?m)^\t+` "" $svg -}}
+  {{- $svg = replaceRE `(?m)^[ \t]*\r?\n` "" $svg -}}
+  {{- $svg = replaceRE `rgb\([^\)]*\)` "currentColor" $svg -}}
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="{{.Get 0}}" height="{{.Get 1}}" style="display:block; margin:0 auto; background: none">
+  {{- $svg | safeHTML -}}
+  </svg>
+{{- else -}}
+  <img src="{{ relURL $img }}" style="text-align: center;"/>
+{{- end -}}

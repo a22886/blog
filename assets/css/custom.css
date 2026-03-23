@@ -1,4 +1,17 @@
-article, footer, p, h1, h2, h3, h4, h5, li, a:not(.katex *) {
+@font-face {
+  font-family: 'Latin Modern Roman';
+  src: url('../fonts/lmroman10-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Latin Modern Roman';
+  src: url('../fonts/lmroman10-bolditalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+a, footer, h1, h2, h3, h4, h5, h6, article:not(.katex *, .notice-content *){
   font-family: "Noto Sans SC" !important;
 }
 
@@ -12,3 +25,12 @@ article, footer, p, h1, h2, h3, h4, h5, li, a:not(.katex *) {
     display: inline;
   }
 }
+
+.explain .explain-text{
+  display:none;
+  font: inherit;
+  margin-top:6px;
+  padding:6px 8px;
+  white-space:pre-wrap;
+}
+.explain:hover .explain-text,.explain:focus-within .explain-text{display:inline}
